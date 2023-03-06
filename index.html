@@ -10,12 +10,44 @@
 </head>
 
 <body style="margin: 0; overflow: hidden;">
-    <a-scene embedded loading-screen="enabled: false;" arjs="sourceType: webcam; debugUIEnabled: false;">
+    <!-- <a-scene embedded loading-screen="enabled: false;" arjs="sourceType: webcam; debugUIEnabled: false;">
         <a-image src="src/IDS.jpeg" look-at="[gps-camera]" scale="15 15 15"
             gps-entity-place="latitude: 24.117780; longitude: -110.308826;"></a-image>
 
         <a-camera gps-camera rotation-reader></a-camera>
-    </a-scene>
+    </a-scene> -->
+
+    <a-scene
+            embedded
+            loading-screen="enabled: false;"
+            arjs="sourceType: webcam; debugUIEnabled: false;"
+        >
+            <a-image
+                src="src/ids.jpeg"
+                look-at="[gps-camera]"
+                scale="15 15 15"
+                gps-entity-place="latitude: 24.080084; longitude: -110.312212;"
+            ></a-image>
+
+            <a-image
+                src="src/poli.png"
+                look-at="[gps-camera]"
+                scale="15 15 15"
+                gps-entity-place="latitude: 24.079763; longitude: -110.312448;"
+            ></a-image>
+            
+            <a-image
+                src="src/lati.jpeg"
+                look-at="[gps-camera]"
+                scale="10 10 10"
+                gps-entity-place="latitude: 24.079877; longitude: -110.312450;" 
+            ></a-image>
+
+            <a-camera gps-camera='gpsMinDistance: 6' rotation-reader></a-camera>
+        </a-scene>
+
+
+
 </body>
 
 </html>
